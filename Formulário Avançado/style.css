@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3f96c5;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 465px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+  background: #293241;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+.top {
+  width: 390px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+header {
+  margin-top: 107px;
+}
+
+header h1 {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: auto;
+  color: #ffffff;
+}
+header p {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+.personal-info {
+  background: #f67669;
+  width: 100%;
+
+  font-family: 'Staatliches', sans-serif;
+  font-size: 24px;
+
+  line-height: 34px;
+  color: #ffffff;
+
+  margin-top: 32px;
+  padding: 50px 275px;
+  border-radius: 20px 20px 0 0;
+}
+
+form {
+  background: #ffffff;
+
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 300px;
+  padding: 30px 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.col-2 {
+  display: flex;
+  gap: 22px;
+}
+.col-2 > div:nth-child(1) {
+  width: 100%;
+}
+.col-2 > div:nth-child(2) {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 24px;
+
+  line-height: 34px;
+  text-align: center;
+
+  border-bottom: 1px solid #e6e6f0;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label,
+.checkbox-wrapper label {
+  font-size: 14px;
+
+  line-height: 24px;
+  color: #4e4958;
+
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+  margin-left: 9px;
+
+  font-size: 12px;
+
+  line-height: 20px;
+  color: #c1bccc;
+}
+
+.input-wrapper label span:hover {
+  color: #6c6a71;
+}
+
+.input-wrapper textarea {
+  padding: 5px 10px;
+  height: 166px;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9C1 4.58172 4.58172 1 9 1H17C21.4183 1 25 4.58172 25 9V16.798C25 21.2163 21.4183 24.798 17 24.798H9C4.58172 24.798 1 21.2163 1 16.798V9Z' fill='%23FAFAFC' stroke='%23E6E6F0'/%3E%3C/svg%3E%0A");
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+  background: #fafafc;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+
+  height: 55px;
+  margin-bottom: 16px;
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6a71;
+}
+
+.col-3 {
+  display: flex;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 300px;
+}
+
+.col-3 > div:nth-child(2) {
+  width: 140px;
+  margin: 0px 0px 0px 20px;
+}
+
+.col-3 > div:nth-child(3) {
+  width: 140px;
+  margin: 0px 0px 0px 5px;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+  margin: 0;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+
+  width: 24px;
+  height: 24px;
+
+  display: block;
+  border: 1px solid #e6e6f0;
+
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%23BFD7E4'/%3E%3C/svg%3E%0A");
+  background-position: left 6px top 50%;
+  background-repeat: no-repeat;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid #000000;
+}
+
+.button {
+  margin-top: 64px;
+  width: 100%;
+  height: 51px;
+
+  background: #f67669;
+  border-radius: 8px;
+  border: 0;
+
+  font-family: 'Staatliches', sans-serif;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #ffffff;
+}
+
+.button:hover {
+  background: #ec1a44;
+}
+
+#name-mentor {
+  width: 300px;
+  height: 55px;
+}
+
+#begin,
+#end {
+  width: 140px;
+  height: 55.53px;
+}
+
+#feedback {
+  height: 166.59px;
+  width: 608px;
+}
+
+#date {
+  width: 300px;
+  height: 55px;
+}
